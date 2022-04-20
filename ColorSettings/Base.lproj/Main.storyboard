@@ -121,9 +121,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bluValueSlider" destination="3a4-Gl-dgJ" id="2bm-oe-cYJ"/>
-                        <outlet property="greenValueSlider" destination="GJA-zX-fVP" id="cuf-CH-Y65"/>
-                        <outlet property="redValueSlider" destination="wJm-EY-oEN" id="IKb-ei-Mzo"/>
+                        <outlet property="bluValueLabel" destination="3a4-Gl-dgJ" id="2bm-oe-cYJ"/>
+                        <outlet property="greenValueLabel" destination="GJA-zX-fVP" id="cuf-CH-Y65"/>
+                        <outlet property="redValueLabel" destination="wJm-EY-oEN" id="IKb-ei-Mzo"/>
                         <outlet property="viewForColor" destination="dW2-dd-fLJ" id="Sl7-ip-juh"/>
                     </connections>
                 </viewController>

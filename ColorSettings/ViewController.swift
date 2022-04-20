@@ -11,31 +11,31 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var viewForColor: UIView!
     
-    @IBOutlet weak var redValueSlider: UILabel!
-    @IBOutlet weak var greenValueSlider: UILabel!
-    @IBOutlet weak var bluValueSlider: UILabel!
+    @IBOutlet weak var redValueLabel: UILabel!
+    @IBOutlet weak var greenValueLabel: UILabel!
+    @IBOutlet weak var bluValueLabel: UILabel!
     
     private var redValue: Float = 0 {
         didSet{
             let roundedRedValue = round(redValue * 100) / 100
-            redValueSlider.text = String(roundedRedValue)
-            changeColorView(red: redValue, green: greenValue, blue: blueValue)
+            redValueLabel.text = String(roundedRedValue)
+            changeColorView()
         }
     }
     
     private var greenValue: Float = 0 {
         didSet{
             let roundedGreenValue = round(greenValue * 100) / 100
-            greenValueSlider.text = String(roundedGreenValue)
-            changeColorView(red: redValue, green: greenValue, blue: blueValue)
+            greenValueLabel.text = String(roundedGreenValue)
+            changeColorView()
         }
     }
     
     private var blueValue: Float = 0 {
         didSet{
             let roundedBlueValue = round(blueValue * 100) / 100
-            bluValueSlider.text = String(roundedBlueValue)
-            changeColorView(red: redValue, green: greenValue, blue: blueValue)
+            bluValueLabel.text = String(roundedBlueValue)
+            changeColorView()
         }
     }
     
@@ -55,8 +55,12 @@ class ViewController: UIViewController {
         viewForColor.layer.cornerRadius = 10
     }
     
-    private func changeColorView(red: Float, green: Float, blue: Float) {
-        viewForColor.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1)
+    private func changeColorView() {
+        viewForColor.backgroundColor = UIColor(
+            red: CGFloat(redValue),
+            green: CGFloat(greenValue),
+            blue: CGFloat(blueValue), alpha: 1
+        )
     }
 }
 
