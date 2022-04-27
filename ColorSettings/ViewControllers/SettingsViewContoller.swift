@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewContoller: UIViewController, UITextFieldDelegate {
+class SettingsViewContoller: UIViewController {
 
     @IBOutlet weak var viewForColor: UIView!
     
