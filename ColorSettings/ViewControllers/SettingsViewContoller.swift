@@ -68,7 +68,7 @@ class SettingsViewContoller: UIViewController {
     }
     
     var backgroundColor: UIColor!
-    var delegate: StartViewController!
+    var delegate: SettingsColor!
     
     @IBAction func redSliderChanged(_ sender: UISlider) {
         redValue = sender.value
